@@ -1,0 +1,169 @@
+15:	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+16:	<link rel="stylesheet" type="text/css" href="./styles/global-styles.css" />
+17:	<link rel="stylesheet" type="text/css" href="./styles/ddsmoothmenu/ddsmoothmenu.css" />
+18:	<link rel="stylesheet" type="text/css" href="./styles/ddsmoothmenu/ddsmoothmenu-v.css" />
+77:			<span id="idSecurityLevelHeading" class="version-header" style="margin-left: 40px;"></span>
+78:			<span id="idHintsStatusHeading" class="version-header" style="margin-left: 40px;"></span>
+79:			<span id="idSystemInformationHeading" class="version-header" style="margin-left: 40px;">Not Logged In</span>
+86:					<td><a href="index.php?page=home.php">Home</a></td>
+88:						<a href="./index.php?page=login.php">Login/Register</a>		
+90:					<td><a href="./index.php?do=toggle-hints&page=view-someones-blog.php">Toggle Hints</a></td>					<td><a href="./index.php?do=toggle-security&page=view-someones-blog.php">Toggle Security</a></td>
+91:					<td><a href="set-up-database.php">Reset DB</a></td>
+92:					<td><a href="./index.php?page=show-log.php">View Log</a></td>
+93:					<td><a href="./index.php?page=captured-data.php">View Captured Data</a></td>
+100:		<div id="smoothmenu1" class="ddsmoothmenu">
+103:					<a href="#">Core Controls</a>
+105:						<li><a href="index.php?page=home.php">Home</a></li>
+107:					  		<a href="./index.php?page=login.php">Login/Register</a>						</li>
+108:						<li><a href="./index.php?do=toggle-security&page=view-someones-blog.php">Toggle Security</a></li>
+109:						<li><a href="set-up-database.php">Setup/Reset the DB</a></li>
+110:						<li><a href="./index.php?page=show-log.php">Show Log</a></li>
+111:						<li><a href="./index.php?page=credits.php">Credits</a></li>
+115:					<a href="#">OWASP Top 10</a>
+118:							<a href="http://www.owasp.org/index.php/Top_10_2010-A1" target="_blank">A1 - Injection</a>
+121:									<a href="">SQLi - Extract Data</a>
+123:										<li><a href="./index.php?page=user-info.php">User Info</a></li>
+127:									<a href="">SQLi - Bypass Authentication</a>
+129:										<li><a href="./index.php?page=login.php">Login</a></li>
+133:									<a href="">SQLi - Insert Injection</a>
+135:										<li><a href="./index.php?page=register.php">Register</a></li>
+139:									<a href="">Blind SQL via Timing</a>
+141:										<li><a href="./index.php?page=login.php">Login</a></li>
+142:										<li><a href="./index.php?page=user-info.php">User Info</a></li>
+146:									<a href="">SQLMAP Practice Target</a>
+148:										<li><a href="./index.php?page=view-someones-blog.php">View Someones Blog</a></li>
+149:										<li><a href="./index.php?page=user-info.php">User Info</a></li>
+153:									<a href="">HTML Injection (HTMLi)</a>
+155:										<li><a href="?page=add-to-your-blog.php">Add to your blog</a></li>
+159:									<a href="">HTMLi via HTTP Headers</a>
+161:										<li><a href="./index.php?page=site-footer-xss-discussion.php">Site Footer</a><li>
+162:										<li><a href="">HTTP Response Splitting (Hint: Difficult)</a></li>
+166:									<a href="">HTMLi Via DOM Injection</a>
+168:										<li><a href="index.php?page=html5-storage.php">HTML5 Storage</a></li>
+172:									<a href="">HTMLi Via Cookie Injection</a>
+174:										<li><a href="index.php?page=capture-data.php">Capture Data Page</a></li>
+178:									<a href="">Command Injection</a>
+180:										<li><a href="./index.php?page=dns-lookup.php">DNS Lookup</a></li>
+184:									<a href="">JavaScript Injection</a>
+186:										<li><a href="./index.php">Those "Back" Buttons</a></li>
+188:											<a href="./index.php?page=password-generator.php&username=anonymous">
+195:									<a href="">HTTP Parameter Pollution</a>
+197:										<li><a href="./index.php?page=user-poll.php">Poll Question</a></li>
+201:									<a href="">Cascading Style Injection</a>
+203:										<li><a href="./index.php?page=set-background-color.php">Set Background Color</a></li>
+207:									<a href="">JavaScript Object Notation (JSON) Injection</a>
+209:										<li><a href="./index.php?page=pen-test-tool-lookup.php">Pen Test Tool Lookup</a></li>
+215:							<a href="http://www.owasp.org/index.php/Top_10_2010-A2" target="_blank">A2 - Cross Site Scripting (XSS)</a>
+218:									<a href="">Reflected (First Order)</a>
+220:										<li><a href="./index.php?page=dns-lookup.php">DNS Lookup</a></li>
+221:										<li><a href="./index.php?page=pen-test-tool-lookup.php">Pen Test Tool Lookup</a></li>
+222:										<li><a href="./index.php?page=text-file-viewer.php">Text File Viewer</a></li>
+223:										<li><a href="./index.php?page=user-info.php">User Info</a></li>
+224:										<li><a href="./index.php?page=set-background-color.php">Set Background Color</a></li>
+225:										<li><a href="./index.php?page=html5-storage.php">HTML5 Storage</a></li>
+226:										<li><a href="./index.php?page=capture-data.php">Capture Data Page</a></li>
+230:									<a href="">Persistent (Second Order)</a>
+232:										<li><a href="?page=add-to-your-blog.php">Add to your blog</a></li>
+233:										<li><a href="?page=view-someones-blog.php">View someone's blog</a></li>
+234:										<li><a href="?page=show-log.php">Show Log</a><li>
+238:									<a href="">DOM Injection</a>
+240:										<li><a href="index.php?page=html5-storage.php">HTML5 Storage</a></li>
+244:									<a href="">Via "Input" (GET/POST)</a>
+246:										<li><a href="?page=add-to-your-blog.php">Add to your blog</a></li>
+247:										<li><a href="?page=view-someones-blog.php">View someone's blog</a></li>
+248:										<li><a href="?page=show-log.php">Show Log</a><li>
+249:										<li><a href="?page=text-file-viewer.php">Text File Viewer</a></li>
+250:										<li><a href="./index.php?page=dns-lookup.php">DNS Lookup</a></li>
+251:										<li><a href="?page=user-info.php">User Info</a></li>
+252:										<li><a href="./index.php">Missing HTTPOnly Attribute</a></li>
+253:										<li><a href="./index.php?page=set-background-color.php">Set Background Color</a></li>
+254:										<li><a href="./index.php?page=pen-test-tool-lookup.php">Pen Test Tool Lookup</a></li>
+258:									<a href="">Via HTTP Headers</a>
+260:										<li><a href="./index.php?page=browser-info.php">Browser Info</a></li>
+261:										<li><a href="./index.php?page=show-log.php">Show Log</a><li>
+262:										<li><a href="./index.php?page=site-footer-xss-discussion.php">Site Footer</a><li>
+263:										<li><a href="./index.php?page=html5-storage.php">Those &quot;BACK&quot; Buttons</a></li>
+267:									<a href="">Via Misconfiguration</a>
+269:										<li><a href="./index.php">Missing HTTPOnly Attribute</a></li>
+273:									<a href="">Against HTML 5 Storage</a>
+275:										<li><a href="index.php?page=html5-storage.php">HTML5 Storage</a></li>
+279:									<a href="">Against JSON</a>
+281:										<li><a href="./index.php?page=pen-test-tool-lookup.php">Pen Test Tool Lookup</a></li>
+285:									<a href="">Via Cookie Injection</a>
+287:										<li><a href="index.php?page=capture-data.php">Capture Data Page</a></li>
+293:							<a href="http://www.owasp.org/index.php/Top_10_2010-A3" target="_blank">
+297:								<li><a href="index.php">Cookies</a></li>
+298:								<li><a href="?page=login.php">Login</a></li>
+302:							<a href="http://www.owasp.org/index.php/Top_10_2010-A4" target="_blank">A4 - Insecure Direct Object References</a>
+304:								<li><a href="index.php?page=text-file-viewer.php">Text File Viewer</a></li>
+305:								<li><a href="index.php?page=source-viewer.php">Source Viewer</a></li>
+306:								<li><a href="index.php?page=credits.php">Credits</a></li>
+307:								<li><a href="index.php">Cookies</a></li>
+308:								<li><a href="index.php?page=arbitrary-file-inclusion.php">Arbitrary File Inclusion</a></li>
+312:							<a href="http://www.owasp.org/index.php/Top_10_2010-A5" target="_blank">A5 - Cross Site Request Forgery (CSRF)</a>
+314:								<li><a href="index.php?page=add-to-your-blog.php">Add to your blog</a></li>
+315:								<li><a href="./index.php?page=register.php">Register User</a></li>
+319:							<a href="http://www.owasp.org/index.php/Top_10_2010-A6" target="_blank">A6 - Security Misconfiguration</a>
+321:								<li><a href="index.php?page=home.php">Directory Browsing</a></li>
+322:								<li><a href="./index.php?page=user-info.php">GET for POST</a></li>
+326:							<a href="http://www.owasp.org/index.php/Top_10_2010-A7" target="_blank">A7 - Insecure Cryptographic Storage</a>
+328:								<li><a href="index.php?page=user-info.php">User Info</a></li>
+329:								<li><a href="index.php?page=html5-storage.php">HTML5 Storage</a></li>
+333:							<a href="http://www.owasp.org/index.php/Top_10_2010-A8" target="_blank">A8 - Failure to Restrict URL Access</a>
+335:								<li><a href="index.php?page=secret-administrative-pages.php">"Secret" Administrative Pages</a></li>
+336:								<li><a href="http://en.wikipedia.org/wiki/Robots_exclusion_standard">Robots.txt</a></li>
+340:							<a href="http://www.owasp.org/index.php/Top_10_2010-A9" target="_blank">A9 - Insufficient Transport Layer Protection</a>
+342:								<li><a href="?page=login.php">Login</a></li>
+343:								<li><a href="?page=user-info.php">User Info</a></li>
+347:							<a href="http://www.owasp.org/index.php/Top_10_2010-A10" target="_blank">A10 - Unvalidated Redirects and Forwards</a>
+349:								<li><a href="?page=credits.php">Credits</a></li>
+350:																<a href="#">Setup/reset the DB (Disabled: Not Admin)</a></li>
+357:					<a href="#">Others</a>
+360:							<a href="http://www.owasp.org/index.php/Top_10_2007-A3" target="_blank">OWASP 2007 A3 - Malicious File Execution</a>
+362:								<li><a href="?page=text-file-viewer.php">Text File Viewer</a></li>
+363:								<li><a href="?page=source-viewer.php">Source Viewer</a></li>
+367:							<a href="http://www.owasp.org/index.php/Top_10_2007-A6" target="_blank">OWASP 2007 A6 - Information Leakage and Improper Error Handling</a>
+369:								<li><a href="index.php">Cache Control</a></li>
+370:								<li><a href="index.php">X-Powered-By HTTP Header</a></li>
+371:								<li><a href="index.php">HTML/JavaScript Comments</a></li>
+372:								<li><a href="index.php?page=framing.php">Click-Jacking</a></li>
+373:								<li><a href="framer.html">Cross-Site Framing (Third-Party Framing)</a></li>
+374:								<li><a href="index.php?page=html5-storage.php">HTML5 Storage</a></li>
+378:							<a href="">Denial of Service</a>
+380:								<li><a href="?page=text-file-viewer.php">Text File Viewer</a></li>
+381:								<li><a href="?page=show-log.php">Show Web Log</a><li>
+385:							<a href="">JavaScript "Security"</a>
+387:								<li><a href="index.php?page=login.php">Login</a></li>
+388:								<li><a href="index.php?page=add-to-your-blog.php">Add to your blog</a></li>
+389:								<li><a href="index.php?page=html5-storage.php">HTML5 Storage</a></li>
+393:							<a href="">Data Capture Pages</a>
+395:								<li><a href="index.php?page=capture-data.php">Data Capture</a></li>
+396:								<li><a href="index.php?page=captured-data.php">View Captured Data</a></li>
+402:					<a href="#">Documentation</a>
+404:						<li><a href="index.php?page=change-log.htm">Change Log</a></li>
+405:						<li><a href="index.php?page=installation.php">Installation Instructions</a></li>
+406:						<li><a href="/mutillidae/documentation/mutillidae-installation-on-xampp-win7.pdf">Installation Instructions: Windows 7 (PDF)</a></li>
+407:						<li><a href="index.php?page=documentation/vulnerabilities.php">Listing of Vulnerabilities</a></li>
+409:							<a href="index.php?page=documentation/how-to-access-Mutillidae-over-Virtual-Box-network.php" target="_blank">
+416:					<a href="#">Resources</a>
+419:							<a onclick="bookmarkSite();" href="">
+424:							<a href="https://www.owasp.org/index.php/Top_Ten" target="_blank">
+429:							<a href="http://samurai.inguardians.com/" target="_blank">
+434:							<a href="https://addons.mozilla.org/en-US/firefox/collections/jdruin/pro-web-developer-qa-pack/" target="_blank">
+439:							<a href="http://www.irongeek.com/i.php?page=security/mutillidae-deliberately-vulnerable-php-owasp-top-10" target="_blank">
+445:							<a href="http://www.hackersforcharity.org/ghdb/" target="_blank">
+455:			<a href="https://www.owasp.org" target="_blank">
+461:			<a href="https://addons.mozilla.org/en-US/firefox/collections/jdruin/pro-web-developer-qa-pack/" style="text-decoration: none;">
+468:			<a href="https://twitter.com/webpwnized" style="text-decoration: none;" target="_blank">
+476:			<a href="http://www.youtube.com/user/webpwnized" style="text-decoration: none; white-space:nowrap;" target="_blank">
+483:		<div class="label" style="text-align: center;">Developed by Adrian &quot;<a href="http://www.irongeek.com">Irongeek</a>&quot; Crenshaw and Jeremy Druin</div>
+495:	<a 	onclick="document.location.href='';" 
+511:		<a href="http://localhost/mutillidae/index.php?page=add-to-your-blog.php">
+516:	<form action="index.php?page=view-someones-blog.php" method="post" enctype="application/x-www-form-urlencoded">
+518:			<tr id="id-bad-blog-entry-tr" style="display: none;">
+525:				<td id="id-blog-form-header-td" class="form-header">Select Author and Click to View Blog</td>
+530:					<select name="author" id="id_author_select">
+558:				<td colspan="2" class="error-header" style="text-align: center;">Did you <a href="set-up-database.php">setup/reset the DB</a>?</td>
+562:					<input name="view-someones-blog-php-submit-button" class="button" type="submit" value="View Blog Entries" />
+580:		<a href="http://www.irongeek.com/i.php?page=security/mutillidae-deliberately-vulnerable-php-owasp-top-10" target="_blank">
+583:		can downloaded from <a href="http://irongeek.com" target="_blank">Irongeek's Site</a>

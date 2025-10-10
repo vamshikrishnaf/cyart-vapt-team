@@ -1,0 +1,21 @@
+52:			//document.getElementById("idSystemInformationHeading").innerHTML = l_loginMessage;
+77:			<span id="idSecurityLevelHeading" class="version-header" style="margin-left: 40px;"></span>
+78:			<span id="idHintsStatusHeading" class="version-header" style="margin-left: 40px;"></span>
+79:			<span id="idSystemInformationHeading" class="version-header" style="margin-left: 40px;">Not Logged In</span>
+100:		<div id="smoothmenu1" class="ddsmoothmenu">
+121:									<a href="">SQLi - Extract Data</a>
+127:									<a href="">SQLi - Bypass Authentication</a>
+133:									<a href="">SQLi - Insert Injection</a>
+139:									<a href="">Blind SQL via Timing</a>
+146:									<a href="">SQLMAP Practice Target</a>
+195:									<a href="">HTTP Parameter Pollution</a>
+244:									<a href="">Via "Input" (GET/POST)</a>
+367:							<a href="http://www.owasp.org/index.php/Top_10_2007-A6" target="_blank">OWASP 2007 A6 - Information Leakage and Improper Error Handling</a>
+407:						<li><a href="index.php?page=documentation/vulnerabilities.php">Listing of Vulnerabilities</a></li>
+439:							<a href="http://www.irongeek.com/i.php?page=security/mutillidae-deliberately-vulnerable-php-owasp-top-10" target="_blank">
+489:<div class="page-title" style="padding:10px;width:75%;margin-left:auto;margin-right:auto;text-align:center;">Mutillidae: Deliberately Vulnerable PHP Scripts Of OWASP Top 10</div>
+495:		<li><a class="label" style="text-decoration: none;" href="http://www.irongeek.com/i.php?page=security/mutillidae-deliberately-vulnerable-php-owasp-top-10" target="_blank">Latest Version</a></li>
+530:				<img alt="PHP-MySQL" style="border-width: 0px;" height="88px" width="100px" src="./images/php-mysql-logo-176-200.jpeg" />
+532:			<a href="http://www.quest.com/toad-for-mysql/" target="_blank" style="margin-left:30px;">
+533:				<img alt="PHP-MySQL" style="border-width: 0px;" height="80px" width="77px" src="./images/toad-for-mysql-77-80.jpg" />
+551:		<a href="http://www.irongeek.com/i.php?page=security/mutillidae-deliberately-vulnerable-php-owasp-top-10" target="_blank">

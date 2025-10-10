@@ -1,0 +1,10 @@
+# Nmap 7.95 scan initiated Thu Oct  9 09:24:55 2025 as: /usr/lib/nmap/nmap --privileged -p 21 --script=ftp-anon -oN /home/kali/cyart-vapt-team/Week2/scans/nmap_ftp_anon.txt 192.168.222.129
+Nmap scan report for 192.168.222.129
+Host is up (0.00034s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+MAC Address: 00:0C:29:FA:DD:2A (VMware)
+
+# Nmap done at Thu Oct  9 09:24:56 2025 -- 1 IP address (1 host up) scanned in 0.27 seconds

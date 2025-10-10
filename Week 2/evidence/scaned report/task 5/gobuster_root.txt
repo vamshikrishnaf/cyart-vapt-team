@@ -1,0 +1,13 @@
+/.hta                [33m (Status: 403)[0m [Size: 292]
+/.htpasswd           [33m (Status: 403)[0m [Size: 297]
+/.htaccess           [33m (Status: 403)[0m [Size: 297]
+/cgi-bin/            [33m (Status: 403)[0m [Size: 296]
+/dav                 [36m (Status: 301)[0m [Size: 321][34m [--> http://192.168.222.129/dav/][0m
+/index               [32m (Status: 200)[0m [Size: 891]
+/index.php           [32m (Status: 200)[0m [Size: 891]
+/phpMyAdmin          [36m (Status: 301)[0m [Size: 328][34m [--> http://192.168.222.129/phpMyAdmin/][0m
+/phpinfo             [32m (Status: 200)[0m [Size: 48023]
+/phpinfo.php         [32m (Status: 200)[0m [Size: 48035]
+/server-status       [33m (Status: 403)[0m [Size: 301]
+/test                [36m (Status: 301)[0m [Size: 322][34m [--> http://192.168.222.129/test/][0m
+/twiki               [36m (Status: 301)[0m [Size: 323][34m [--> http://192.168.222.129/twiki/][0m
