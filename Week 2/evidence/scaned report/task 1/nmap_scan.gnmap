@@ -1,0 +1,12 @@
+# Nmap 7.95 scan initiated Tue Oct  7 07:43:14 2025 as: /usr/lib/nmap/nmap --privileged -sV -sC --reason -oA results/nmap_scan 192.168.222.129/24
+Host: 192.168.222.1 ()	Status: Up
+Host: 192.168.222.1 ()	Ports: 	Ignored State: filtered (1000)
+Host: 192.168.222.2 ()	Status: Up
+Host: 192.168.222.2 ()	Ports: 53/open/tcp//domain//dnsmasq 2.45/	Ignored State: closed (999)
+Host: 192.168.222.129 ()	Status: Up
+Host: 192.168.222.129 ()	Ports: 21/open/tcp//ftp//vsftpd 2.3.4/, 22/open/tcp//ssh//OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)/, 23/open/tcp//telnet//Linux telnetd/, 25/open/tcp//smtp//Postfix smtpd/, 53/open/tcp//domain//ISC BIND 9.4.2/, 80/open/tcp//http//Apache httpd 2.2.8 ((Ubuntu) DAV|2)/, 111/open/tcp//rpcbind//2 (RPC #100000)/, 139/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 445/open/tcp//netbios-ssn//Samba smbd 3.0.20-Debian (workgroup: WORKGROUP)/, 512/open/tcp//exec//netkit-rsh rexecd/, 513/open/tcp//login//OpenBSD or Solaris rlogind/, 514/open/tcp//tcpwrapped///, 1099/open/tcp//java-rmi//GNU Classpath grmiregistry/, 1524/open/tcp//bindshell//Metasploitable root shell/, 2049/open/tcp//nfs//2-4 (RPC #100003)/, 2121/open/tcp//ftp//ProFTPD 1.3.1/, 3306/open/tcp//mysql//MySQL 5.0.51a-3ubuntu5/, 5432/open/tcp//postgresql//PostgreSQL DB 8.3.0 - 8.3.7/, 5900/open/tcp//vnc//VNC (protocol 3.3)/, 6000/open/tcp//X11//(access denied)/, 6667/open/tcp//irc//UnrealIRCd/, 8009/open/tcp//ajp13//Apache Jserv (Protocol v1.3)/, 8180/open/tcp//http//Apache Tomcat|Coyote JSP engine 1.1/	Ignored State: closed (977)
+Host: 192.168.222.254 ()	Status: Up
+Host: 192.168.222.254 ()	Ports: 	Ignored State: filtered (1000)
+Host: 192.168.222.128 ()	Status: Up
+Host: 192.168.222.128 ()	Ports: 	Ignored State: closed (1000)
+# Nmap done at Tue Oct  7 07:43:43 2025 -- 256 IP addresses (5 hosts up) scanned in 29.28 seconds
