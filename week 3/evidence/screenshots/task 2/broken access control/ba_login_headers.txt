@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Date: Thu, 23 Oct 2025 12:19:27 GMT
+Server: Apache/2.4.65 (Debian)
+Set-Cookie: security=impossible; path=/; HttpOnly
+Set-Cookie: PHPSESSID=204e555ae4ea736f6a734acb9797feda; expires=Fri, 24 Oct 2025 12:19:27 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict
+Expires: Tue, 23 Jun 2009 12:00:00 GMT
+Cache-Control: no-cache, must-revalidate
+Pragma: no-cache
+Set-Cookie: PHPSESSID=5d7b843fa794c27d6d53d1204e2b9451; expires=Fri, 24 Oct 2025 12:19:27 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict
+Vary: Accept-Encoding
+Content-Length: 1342
+Content-Type: text/html;charset=utf-8
+

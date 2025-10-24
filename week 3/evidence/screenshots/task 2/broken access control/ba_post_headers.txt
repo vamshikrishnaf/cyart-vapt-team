@@ -1,0 +1,25 @@
+HTTP/1.1 302 Found
+Date: Thu, 23 Oct 2025 12:19:27 GMT
+Server: Apache/2.4.65 (Debian)
+Set-Cookie: security=impossible; path=/; HttpOnly
+Set-Cookie: PHPSESSID=0dd496165bfd2d630a4f7a22f0142fd5; expires=Fri, 24 Oct 2025 12:19:27 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Set-Cookie: PHPSESSID=adf08f98b2971260cbdf9c7fed282673; expires=Fri, 24 Oct 2025 12:19:27 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict
+Set-Cookie: PHPSESSID=adf08f98b2971260cbdf9c7fed282673; expires=Fri, 24 Oct 2025 12:19:27 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict
+Set-Cookie: PHPSESSID=6202676d0d1a647f7d1bc462be1750be; expires=Fri, 24 Oct 2025 12:19:27 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict
+Location: index.php
+Content-Length: 0
+Content-Type: text/html; charset=UTF-8
+
+HTTP/1.1 200 OK
+Date: Thu, 23 Oct 2025 12:19:27 GMT
+Server: Apache/2.4.65 (Debian)
+Expires: Tue, 23 Jun 2009 12:00:00 GMT
+Cache-Control: no-cache, must-revalidate
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 6453
+Content-Type: text/html;charset=utf-8
+
